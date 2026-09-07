@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Sera — Layered hero recipe</title><meta name="description" content="An original, accessible layered landscape built from local SVG and native scrolling."><link rel="stylesheet" href="./style.css"></head>
+<body>
+<a class="skip" href="#about">Skip the landscape</a>
+<main data-recipe="layered-hero">
+  <header class="masthead"><a href="#top" class="wordmark">SERA<span>Field notes</span></a><a href="#about">The observation</a></header>
+  <label class="motion-control"> <input type="checkbox" data-motion checked> Enable scene motion <span>(desktop only; system preference takes priority)</span></label>
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="scene" data-stage>
+      <div class="sky plane" data-plane="sky" aria-hidden="true"></div>
+      <svg class="ridge plane" data-plane="ridge" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="#b7bea5" d="M0 540 130 385 218 443 401 222 555 387 723 183 895 355 1112 211 1260 394 1440 257V900H0Z"/><path fill="#8d9c81" d="m0 605 241-184 195 128 182-178 241 203 170-132 216 105 195-181v534H0Z"/></svg>
+      <div class="hero-copy"><p class="eyebrow">A study in paying attention</p><h1 id="hero-title">Go where<br>the world<br><em>gets quiet.</em></h1><p>Look beyond the familiar. A field journal for noticing what changes when you slow down.</p><a class="text-link" href="#about">Read the field note <span aria-hidden="true">↗</span></a></div>
+      <svg class="ground plane" data-plane="ground" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><path fill="#455d4b" d="M0 792Q168 612 410 719T848 679Q1156 519 1440 714V1000H0Z"/><path fill="#243e34" d="M0 865q220-172 462-89t401-16q246-99 577 59v181H0Z"/></svg>
+      <svg class="observatory plane" data-plane="subject" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><ellipse fill="#112b2370" cx="1030" cy="769" rx="155" ry="16"/><path fill="#e8d7b8" d="M950 658h160v108H950Z"/><path fill="#a4543f" d="M938 658q92-167 184 0Z"/><path fill="#c9b38c" d="M1030 766V664h80v102Z"/><path fill="#273e34" d="M1008 692h44v74h-44Z"/><path fill="#f3e6ce" d="M969 683h21v28h-21Zm101 0h21v28h-21Z"/><path fill="none" stroke="#c5a278" stroke-width="4" d="M948 662h164"/></svg>
+      <svg class="near plane" data-plane="near" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><g fill="none" stroke="#152e26" stroke-width="8"><path d="M48 940q51-166-19-260m37 128q32-61 78-70m-84 31q-8-63-48-83m133 254q-3-108 55-200m-47 112q39-37 78-25m1157 122q-39-119 35-219m-50 148q-33-58-79-65"/></g></svg>
+      <span class="scene-caption">An imagined landscape, drawn in SVG.</span>
+    </div>
+  </section>
+  <section class="note" id="about"><p class="eyebrow">The observation</p><h2>Distance changes<br>what you notice.</h2><div><p>A ridge holds still. The grasses pass close by. Between them, a small shelter gives the landscape a scale you can understand.</p><p>This scene uses independent layers with one shared ground anchor. Its text and links remain ordinary HTML. Turn motion off, resize the window, or follow the page with a keyboard: the composition still reads.</p><a href="#top" class="text-link">Return to the opening <span aria-hidden="true">↑</span></a></div></section>
+  <footer>SERA / Original demonstration · No external assets</footer>
+</main>
+<script type="module">import { mount as mountRecipe } from './recipe.js'; let dispose = mountRecipe(document); window.venoxRecipe = { mount(root = document) { dispose(); dispose = mountRecipe(root); return dispose; }, destroy() { dispose(); dispose = () => {}; } };</script>
+</body></html>

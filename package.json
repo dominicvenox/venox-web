@@ -1,0 +1,27 @@
+{
+  "name": "venox-web",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A portable website design skill with immersive motion recipes and optional review tools.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "test:tooling": "node --test tests/tooling.test.mjs",
+    "test:recipes": "node --test tests/recipes.test.mjs",
+    "capture": "node scripts/capture.mjs",
+    "preview": "node scripts/serve.mjs",
+    "pack:skill": "node scripts/pack.mjs",
+    "check": "npm run validate && npm test"
+  },
+  "devDependencies": {
+    "fflate": "0.8.3",
+    "playwright": "1.63.0",
+    "yaml": "2.9.0"
+  },
+  "author": "Dominic Gerber"
+}

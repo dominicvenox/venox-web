@@ -1,0 +1,15 @@
+{
+  "routes": ["/layered-hero/", "/pinned-story/", "/horizontal-gallery/", "/video-scrub/"],
+  "viewports": [
+    { "name": "desktop", "width": 1440, "height": 900 },
+    { "name": "mobile", "width": 390, "height": 844 },
+    { "name": "small-mobile", "width": 360, "height": 640 }
+  ],
+  "positions": [
+    { "name": "opening", "progress": 0 },
+    { "name": "middle", "progress": 0.5 },
+    { "name": "end", "progress": 1 },
+    { "name": "reverse", "progress": 0.25 }
+  ],
+  "reducedMotion": false
+}

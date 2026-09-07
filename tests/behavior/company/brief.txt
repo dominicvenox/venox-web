@@ -1,0 +1,6 @@
+Fictional client: Linden Raum, an independent architecture studio in Leipzig.
+Services: residential renovation, interiors, feasibility studies.
+Audience: people considering changes to an existing home.
+Primary action: email hallo@linden-raum.example (example address for this local prototype).
+Tone: clear, calm, precise. Language: German.
+No supplied projects, photography, testimonials or performance figures.

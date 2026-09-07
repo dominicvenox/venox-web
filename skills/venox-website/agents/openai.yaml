@@ -1,0 +1,7 @@
+interface:
+  display_name: "Venox Website"
+  short_description: "Distinctive websites, thoughtful design and scroll motion"
+  default_prompt: "Use $venox-website to build or improve a website around its audience, brand and purpose."
+
+policy:
+  allow_implicit_invocation: true

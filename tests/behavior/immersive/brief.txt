@@ -1,0 +1,7 @@
+Fictional product: Nocturne Field One, a pocket audio field recorder.
+Confirmed features for this prototype: two microphones, tactile record button,
+USB-C connection, local removable-card recording. No battery/runtime/weight specs supplied.
+Audience: sound artists who record outdoors. Goal: understand the recording process.
+Primary action: read the workflow section. No store, checkout or mailing-list service.
+Tone: precise and exploratory, dark navy and signal orange. Language: English.
+Use the supplied product.svg as a product illustration; it is original demo artwork.

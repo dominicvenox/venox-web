@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><link rel="icon" href="data:,"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Afterimage — Video scrub recipe</title><meta name="description" content="An optional local video scrub demonstration with a complete static poster and no autoplay."><link rel="stylesheet" href="./style.css"></head>
+<body><a class="skip" href="#notes">Skip the motion study</a><main data-recipe="video-scrub">
+<header><a class="brand" href="#top">AFTERIMAGE<span>A motion study</span></a><a href="#notes">Production notes</a></header>
+<section class="intro" id="top"><p class="eyebrow">An image, held in time</p><h1>Let a moment<br><em>take its time.</em></h1><p>Explore the shape of a movement at your own pace. This local demonstration begins with a complete still image.</p></section>
+<section class="source-controls" aria-label="Local demonstration controls">
+  <div class="file-control"><label for="video-file">Choose your own short MP4 or WebM</label><input id="video-file" data-file type="file" accept="video/mp4,video/webm,.mp4,.webm"><p id="file-help">Processed by your browser. The selected file is never uploaded. A silent clip with frequent keyframes works best.</p></div>
+  <label class="motion-control"><input type="checkbox" data-motion checked> Enable scroll playback <span>(desktop only; system preference takes priority)</span></label>
+  <p class="status" data-status role="status" aria-live="polite">Choose a local video to enable the study. The poster is the complete default.</p>
+</section>
+<noscript><p class="noscript">This study is showing its still composition. Video controls require JavaScript.</p></noscript>
+<section class="film" aria-labelledby="film-title">
+  <div class="stage" data-stage>
+    <img class="poster" src="./poster.svg" width="1440" height="900" alt="An original abstract ribbon crossing a warm circular light on a deep blue field.">
+    <video data-video muted playsinline preload="none" aria-hidden="true" tabindex="-1"></video>
+    <div class="caption"><p class="eyebrow">A pause with a purpose</p><h2 id="film-title">Watch the<br>shape change.</h2><p>The illustration is an original placeholder. Your chosen footage replaces it when the browser is ready.</p></div>
+    <div class="film-footer"><span>Sound is disabled.</span><a href="#notes">Read the production notes <span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+<section class="notes" id="notes"><p class="eyebrow">Production notes</p><h2>The still image<br>is part of the work.</h2><div><p>A scrolling film needs a first frame that works before the video arrives. Keep the message, navigation, and essential information complete in that state.</p><p>For your own page, export a poster from the actual footage. Use a short, optimized local clip with dense keyframes, inspect its intermediate frames, and check the devices your audience uses.</p><p>This example deliberately uses a static composition on narrow screens and when reduced motion is requested. Change the system preference while the page is open to see the mode update.</p><a href="#top">Back to the opening ↑</a></div></section>
+<footer>AFTERIMAGE / Original demonstration · No autoplay or external requests</footer>
+</main><script type="module">import { mount as mountRecipe } from './recipe.js'; let dispose = mountRecipe(document); window.venoxRecipe = { mount(root = document) { dispose(); dispose = mountRecipe(root); return dispose; }, destroy() { dispose(); dispose = () => {}; } };</script></body></html>
