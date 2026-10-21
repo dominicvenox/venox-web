@@ -1,15 +1,28 @@
-# Venox Website
+<div align="center">
 
-**Make the website fit the story.**
+<img src="assets/venox-brand/hero.png" alt="VENOX WEB — sculptural orange neon browser frames on dark metal" width="1280">
 
-Created by [Dominic Gerber](https://github.com/dominicvenox).
+<br>
+
+<img src="assets/venox-brand/stack.svg" alt="Codex + Claude · Design + frontend · MIT licensed" width="620">
+
+### Make the website fit the story.
+
+**[Install](#install)** &nbsp; · &nbsp; **[Use](#use)** &nbsp; · &nbsp; **[Explore the recipes](#four-runnable-recipes)** &nbsp; · &nbsp; **[Validation](docs/validation.md)**
+
+<sub>Created by <a href="https://github.com/dominicvenox">Dominic Gerber</a>.</sub>
+
+</div>
 
 A website skill for Codex and Claude Code, combining considered visual design with
 an optional immersive scroll workflow. Build a clear company site, an editorial
 portfolio, a product storefront or an expressive launch page. The brief determines
 the look, structure and amount of movement.
 
-Venox is the name of the tool, not a preset visual identity.
+**Venox is the name of the tool, not a preset visual identity.** Your website keeps
+its own brand; this repository wears ours.
+
+<img src="assets/venox-brand/workflow.svg" alt="Brief: understand the project. Compose: find the visual direction. Build: make it work. Polish: inspect and refine." width="1280">
 
 ## Install
 
@@ -157,3 +170,15 @@ Copyright (c) 2026 Dominic Gerber. Released under the [MIT License](LICENSE).
 
 The optional development dependencies retain their own licenses and are not included
 in the standalone skill ZIP.
+
+<br>
+
+<div align="center">
+
+<img src="assets/venox-brand/signal.svg" alt="Venox orange neon signal" width="1280">
+
+**VENOX** &nbsp; / &nbsp; DESIGN. BUILD. REFINE.
+
+<sub>[SEO + GEO](https://github.com/dominicvenox/venox-seogeo) &nbsp; · &nbsp; [Lern mich kennen](https://github.com/dominicvenox/lern-mich-kennen)</sub>
+
+</div>
