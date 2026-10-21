@@ -31,16 +31,20 @@ export function mount(root = document) {
   function configure() {
     if (disposed) return;
     cancelAnimationFrame(frame); frame = 0;
-    restore(); delete stage.dataset.progress; delete page.dataset.enhanced;
     distance = Math.max(0, track.scrollWidth - viewport.clientWidth);
     active = toggle.checked && !reduced.matches && desktop.matches && distance > 1;
     if (active) {
       viewport.scrollLeft = 0;
       page.dataset.enhanced = 'true';
       travel = distance;
+      // Keep the enhanced layout while measuring. Temporarily removing its height
+      // can clamp document scrolling before ResizeObserver restores the gallery.
       gallery.style.height = `${Math.ceil(stage.offsetHeight + travel)}px`;
       schedule();
-    } else { current = 0; updateButtons(viewport.scrollLeft); }
+    } else {
+      restore(); delete stage.dataset.progress; delete page.dataset.enhanced;
+      current = 0; updateButtons(viewport.scrollLeft);
+    }
   }
   function moveTo(offset) {
     const x = Math.max(0, Math.min(distance, offset));
