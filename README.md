@@ -63,13 +63,7 @@ In Claude Code:
 /venox-website polish the mobile navigation and typography
 ```
 
-German works too:
-
-```text
-$venox-website Plane eine Website für ein regionales Handwerksunternehmen.
-/venox-website Überarbeite diese Landingpage. Behalte Logo, Farben und Funktionen.
-$venox-website Prüfe die Scroll-Animation auf Mobilgeräten, ohne Code zu ändern.
-```
+Requests may also be written in German. Use the language that fits your project.
 
 Natural language takes priority over mode labels. The seven modes are `plan`,
 `build`, `refine`, `redesign`, `animate`, `audit` and `polish`. Planning and auditing
