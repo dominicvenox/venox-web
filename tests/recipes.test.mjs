@@ -131,23 +131,30 @@ for (const recipe of recipes) {
   });
 }
 
-test('horizontal gallery reaches its final card with keyboard at both sizes', async t => {
+test('horizontal gallery keeps keyboard destinations through layout updates at both sizes', async t => {
   for (const viewport of [viewports[0], viewports[2]]) {
     const { page, errors } = await pageFor(t, { viewport });
     await page.goto(address('horizontal-gallery'));
     await page.waitForFunction(() => Boolean(window.venoxRecipe));
+    await settled(page);
     const rail = page.locator('[data-viewport]');
     await rail.focus();
     await page.keyboard.press('End');
-    await settled(page);
-    const visibility = await page.evaluate(() => {
+    const waitForCard = index => page.waitForFunction(index => {
       const rail = document.querySelector('[data-viewport]').getBoundingClientRect();
-      const card = [...document.querySelectorAll('.object')].at(-1).getBoundingClientRect();
-      return { visible: card.right <= rail.right + 2 && card.right > rail.left, scrollY };
-    });
-    assert.equal(visibility.visible, true, JSON.stringify({ viewport, visibility }));
-    await page.keyboard.press('Home');
+      const card = [...document.querySelectorAll('.object')].at(index).getBoundingClientRect();
+      return card.left >= rail.left - 2 && card.right <= rail.right + 2;
+    }, index, { timeout: 3000 });
+    await waitForCard(-1);
+    // ResizeObserver and window resize can reconfigure an already scrolled gallery.
+    // Its temporary layout must not clamp the document scroll back to the middle.
+    await page.evaluate(() => dispatchEvent(new Event('resize')));
+    await waitForCard(-1);
+    await page.setViewportSize({ width: viewport.width, height: viewport.height - 40 });
     await settled(page);
+    await waitForCard(-1);
+    await page.keyboard.press('Home');
+    await waitForCard(0);
     assert.ok(await overflow(page) <= 1);
     assert.deepEqual(errors, []);
   }
